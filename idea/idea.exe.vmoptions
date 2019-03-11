@@ -1,0 +1,23 @@
+#在安装目录bin下修改此文件下面的参数
+-server
+-Xms2048m
+-Xmx2048m
+-XX:ReservedCodeCacheSize=512m
+-XX:+UseConcMarkSweepGC
+-XX:SoftRefLRUPolicyMSPerMB=50
+-ea
+-Dsun.io.useCanonCaches=false
+-Djava.net.preferIPv4Stack=true
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:-OmitStackTraceInFastThrow
+-javaagent:D:\develop\developTools\JetBrains\IntelliJ IDEA 2017.3.2\bin\JetbrainsCrack-2.6.10-release-enc.jar
+#说明:
+#  1.Xms1024m,最小内存设置1G
+#  2.Xmx4096m,最大内存设置4G,原因本人工作用电脑内存8G
+#  3.MaxMetaspaceSize=512m,元数据区,jdk8前是方法区内存大小
+#  4.UseConcMarkSweepGC,设置年老代为并发收集
+#  5.SoftRefLRUPolicyMSPerMB=50,"软引用"的对象在最后一次被访问后能存活50毫秒
+#  6.PrintGC,每次GC时打印相关信息
+#  7.PrintGCDetails,每次GC时打印详细信息
+#  其中6,7可以删除,做分析使用
+#ps/此修改只关注前面三个
