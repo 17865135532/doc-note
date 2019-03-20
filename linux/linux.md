@@ -1,3 +1,11 @@
+#  ssh登录
+ssh登陆  
+如果本地端是Linux  
+ssh root@192.168.1.1  
+其中root表示的是登录用户名，192.168.1.1为主机的IP地址，当然也可以使用主机名、域名来指代IP地址。  
+ssh 192.168.1.1  
+则会以当前客户端的用户名进行登录。  
+
 #  配置主机之间的免密ssh登陆
 假如 A  要登陆  B  
 在A上操作：  
@@ -28,3 +36,7 @@ IPADDR=192.168.137.101
 NETMASK=255.255.255.0_**  
 2.service network restart  
 
+#  修改centos开机默认root账户  
+使用root账户进入系统后，打开'/etc/gdm/custom.conf'文件，在[daemon]下添加两行：  
+AutomaticLoginEnable=True  
+AutomaticLogin=root  
