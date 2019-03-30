@@ -40,3 +40,22 @@ NETMASK=255.255.255.0_**
 使用root账户进入系统后，打开'/etc/gdm/custom.conf'文件，在[daemon]下添加两行：  
 AutomaticLoginEnable=True  
 AutomaticLogin=root  
+
+#  scp命令
+scp [参数] [原路径] [目标路径]  
+两台机器IP分别为：A.104.238.161.75，B.43.224.34.73。  
+在A服务器上操作，将B服务器上/home/lk/目录下所有的文件全部复制到本地的/root目录下，  
+命令为：scp -r root@43.224.34.73:/home/lk /root
+在A服务器上将/root/lk目录下所有的文件传输到B的/home/lk/cpfile目录下，  
+命令为：scp -r /root/lk root@43.224.34.73:/home/lk/cpfile
+
+#  centos自带jdk卸载
+1.rpm -qa|grep java  
+2.rpm -e --nodeps xxx  
+#  centos安装jdk
+1.vim /etc/profile  
+2.结尾加上如下两行  
+export JAVA_HOME=/home/java/jdk1.8.0_201  
+export PATH=$PATH:$JAVA_HOME/bin  
+3.source /etc/profile  
+
