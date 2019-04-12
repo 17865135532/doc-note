@@ -36,6 +36,10 @@ IPADDR=192.168.137.101
 NETMASK=255.255.255.0_**  
 2.service network restart  
 
+####  修改主机名
+1.vim /etc/hostname  
+2.reboot  
+
 ##  修改centos开机默认root账户  
 使用root账户进入系统后，打开'/etc/gdm/custom.conf'文件，在[daemon]下添加两行：  
 AutomaticLoginEnable=True  
