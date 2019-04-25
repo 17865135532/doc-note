@@ -109,4 +109,4 @@ scp [参数] [原路径] [目标路径]
 命令为：scp -r /root/lk root@43.224.34.73:/home/lk/cpfile  
 
 ##  创建快捷键
-ln -s /xxx/xxx /xxx
+ln -s /xxx/xxx /xxx 必须都是绝对路径  
