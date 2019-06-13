@@ -108,5 +108,5 @@ scp [参数] [原路径] [目标路径]
 在A服务器上将/root/lk目录下所有的文件传输到B的/home/lk/cpfile目录下，  
 命令为：scp -r /root/lk root@43.224.34.73:/home/lk/cpfile  
 
-##  创建快捷键
+##  创建快捷键（最后一个参数是快捷键）
 ln -s /xxx/xxx /xxx 必须都是绝对路径  
