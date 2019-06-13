@@ -1,4 +1,4 @@
-##  ssh登录
+##  ssh登录 
 ssh登陆  
 如果本地端是Linux  
 ssh root@192.168.1.1  
