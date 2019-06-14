@@ -110,3 +110,10 @@ scp [参数] [原路径] [目标路径]
 
 ##  创建快捷键（最后一个参数是快捷键）
 ln -s /xxx/xxx /xxx 必须都是绝对路径  
+
+##  linux修改磁盘挂载目录
+1.df  -h    查看分区情况及盘符名称  
+2.mkdir  /data  
+3.umount /home  
+4.mount /dev/sdb3 /data  
+5.vi /etc/fstab  编辑/etc/fstab里面的/home为/data  
