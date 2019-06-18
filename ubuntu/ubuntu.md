@@ -22,3 +22,8 @@ HandleLidSwitch： 合上笔记本盖后的行为
 1.vim /etc/systemd/logind.conf  
 2.修改#HandleLidSwitch=suspend为HandleLidSwitch=ignore
 3.sudo shutdown -r now  
+
+##  开启Ubuntu系统root账户的声音
+1.vim /root/.profile
+2.在最后新增一行：pulseaudio --start --log-target=syslog
+3.reboot
