@@ -117,3 +117,8 @@ ln -s /xxx/xxx /xxx 必须都是绝对路径
 3.umount /home  
 4.mount /dev/sdb3 /data  
 5.vi /etc/fstab  编辑/etc/fstab里面的/home为/data  
+
+##  解决字体缺失的问题
+1.复制字体到/usr/share/fonts目录下  
+2.执行命令mkfontscale  
+3.执行命令mkfontdir  
