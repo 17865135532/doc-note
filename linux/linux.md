@@ -129,3 +129,8 @@ ln -s /xxx/xxx /xxx 必须都是绝对路径
 1.复制字体到/usr/share/fonts目录下  
 2.执行命令mkfontscale  
 3.执行命令mkfontdir  
+
+##  配置命令别名
+1.vim /root/.bashrc  
+2.增加 alias hello='echo hello xiaoa'
+3.生效(点点之间有空格) . .bashrc
