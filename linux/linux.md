@@ -118,6 +118,18 @@ scp [参数] [原路径] [目标路径]
 ##  创建快捷键（最后一个参数是快捷键）
 ln -s /xxx/xxx /xxx 必须都是绝对路径  
 
+##  挂载内存盘
+1.创建目录  mkdir -p /tmpfs/ramdisk  
+2.编辑文件  vim /etc/fstab  添加  
+    tmpfs   /tmpfs/ramdisk  tmpfs   size=2G 0   0  
+3.挂载内存盘  
+    umount /tmpfs/ramdisk  (卸载旧的内存盘)  
+    mount -a  (使新内存盘生效)  
+4.卸载内存盘
+    umount /tmpfs/ramdisk  (卸载旧的内存盘)  
+5.查看磁盘信息  
+    df -h  
+
 ##  linux修改磁盘挂载目录
 1.df  -h    查看分区情况及盘符名称  
 2.mkdir  /data  
