@@ -132,5 +132,5 @@ ln -s /xxx/xxx /xxx 必须都是绝对路径
 
 ##  配置命令别名
 1.vim /root/.bashrc  
-2.增加 alias hello='echo hello xiaoa'
-3.生效(点点之间有空格) . .bashrc
+2.增加 alias hello='echo hello xiaoa'  
+3.生效(点点之间有空格) . .bashrc  
