@@ -1,7 +1,18 @@
-#  mysql开启远程访问
--- 创建用户、密码及权限范围 第一个 roo t为用户名 @后为适用的主机，‘%’表示所有电脑都可以访问连接，第二个 root 为密码  
-mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.0.2' IDENTIFIED BY 'root' WITH GRANT OPTION;                 
-Query OK, 0 rows affected (1.57 sec)
-
--- 立即生效
-mysql> flush privileges;
+## centos6.x上通过yum安装mysql
+    1.卸载自带mysql
+        rpm -qa | grep mysql
+        rpm -e --nodeps mysql-libs-5.1.71-1.el6.x86_64
+    2.查看yum自带的mysql
+        yum list | grep mysql
+    3.安装mysql
+        yum install -y mysql-server mysql mysql-devel
+    4.启动mysql
+        service mysqld start
+    5.配置开机启动
+        chkconfig mysqld on
+    6.为root用户设置密码
+        mysqladmin -u root password '123456'
+    7.开启远程访问
+        mysql -uroot -p123456
+        GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
+        flush privileges;
