@@ -14,7 +14,22 @@ ssh-keygen   (提示时，直接回车即可)
 %%再将A自己的公钥拷贝并追加到B的授权列表文件authorized_keys中  
 ssh-copy-id   B  
 
-##  修改centos的IP地址
+##  修改centos6.x的IP地址
+1.vim /etc/sysconfig/network-scripts/ifcfg-eth0  
+DEVICE=eth0
+HWADDR=00:0C:29:84:A8:8E
+TYPE=Ethernet
+UUID=92f34042-51e3-40be-b0c6-561d58d4023d
+ONBOOT=yes
+NM_CONTROLLED=yes
+BOOTPROTO=static
+IPADDR=192.168.41.100
+NETMASK=255.255.255.0
+GATEWAY=192.168.41.2
+DNS1=8.8.8.8
+2.service network restart 
+
+##  修改centos7.x的IP地址
 1.vim /etc/sysconfig/network-scripts/ifcfg-ens33  
 TYPE=Ethernet  
 PROXY_METHOD=none  
@@ -34,6 +49,7 @@ DEVICE=ens33
 HWADDR=00:0C:29:D5:31:78  
 IPADDR=192.168.137.101  
 NETMASK=255.255.255.0_**  
+DNS1=8.8.8.8
 2.service network restart  
 
 ####  修改主机名
