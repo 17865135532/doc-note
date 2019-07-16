@@ -33,3 +33,5 @@
         logfile /root/redis-5.0.5/log/redis.log
     12.修改dump.rdb文件存放位置(需要手动创建dump.rdb文件,默认在根目录下)
         dir /root/redis-5.0.5/data
+#### redis配置详解
+    https://www.cnblogs.com/kreo/p/4423362.html
