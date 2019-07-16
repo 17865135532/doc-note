@@ -25,3 +25,7 @@
         service redis stop
     9.配置开机启动
         chkconfig redis on 
+    10.配置远程访问
+        vim /root/redis-5.0.5/redis.conf
+        #bind 127.0.0.1
+        protected-mode no
