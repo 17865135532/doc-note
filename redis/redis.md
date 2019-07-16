@@ -29,3 +29,7 @@
         vim /root/redis-5.0.5/redis.conf
         #bind 127.0.0.1
         protected-mode no
+    11.修改日志文件存放位置
+        logfile /root/redis-5.0.5/log/redis.log
+    12.修改dump.rdb文件存放位置(需要手动创建dump.rdb文件,默认在根目录下)
+        dir /root/redis-5.0.5/data
