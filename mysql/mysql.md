@@ -1,4 +1,4 @@
-## centos6.x上通过yum安装mysql
+#### centos6.x上通过yum安装mysql
     1.卸载自带mysql
         rpm -qa | grep mysql
         rpm -e --nodeps mysql-libs-5.1.71-1.el6.x86_64
