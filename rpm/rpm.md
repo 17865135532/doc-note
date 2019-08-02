@@ -8,13 +8,13 @@
 
 
 ####  进入/root/rpmbuild/SPECS/，编辑打包脚本test.spec
-Name:           universalDataAccess 
-Version:        1.1.1 
-Release:        0 
-Summary:        universalDataAccess
-Group:          System Environment/Daemons
-License:        GPL
-Vendor:         MySelf.com 
+Name:           universalDataAccess  
+Version:        1.1.1  
+Release:        0  
+Summary:        universalDataAccess  
+Group:          System Environment/Daemons  
+License:        GPL  
+Vendor:         MySelf.com  
 
 %description
 
@@ -43,6 +43,3 @@ rpm -e --nodeps xxx.rpm
 
 ####  检查rpm包安装情况
 rpm -qa|grep xxx
-
-
-

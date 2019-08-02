@@ -16,3 +16,16 @@
         mysql -uroot -p123456
         GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
         flush privileges;
+        
+#### mysql存储过程
+    `DROP PROCEDURE IF EXISTS proc_initData;--如果存在此存储过程则删掉
+    DELIMITER $
+    CREATE PROCEDURE proc_initData()
+    BEGIN
+        DECLARE i INT DEFAULT 1;
+        WHILE i<=10000 DO
+            INSERT INTO data(user_id) VALUES(i);
+            SET i = i+1;
+        END WHILE;
+    END $
+    CALL proc_initData();`
