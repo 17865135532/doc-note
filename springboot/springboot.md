@@ -51,3 +51,6 @@
     spring.elasticsearch.jest.proxy.port= # Proxy port the HTTP client should use.
     spring.elasticsearch.jest.read-timeout=3s # Read timeout.
     spring.elasticsearch.jest.username= # Login username.
+    
+#### 解决idea在springboot注入时报错,但实际不影响的问题
+    Setting-->Editor-->Inspections-->Spring-->Spring Core-->Code-->Autowiring for Bean Class 将Error改成warning
