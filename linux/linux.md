@@ -101,13 +101,6 @@ cat /etc/redhat-release
 tar -zcvf my.tar aaa/  压缩  
 tar -zxvf my.tar.gz  解压  
 
-##  循环压缩文件夹脚本(参数j可以让zip包不包含文件夹)
-`#!/bin/bash  
-for file in *  
-do  
-    zip -rj $file.zip $file  
-done`
-
 ##  centos自带jdk卸载
 1.rpm -qa|grep java  
 2.rpm -e --nodeps xxx  

@@ -8,6 +8,7 @@
 
 
 ####  进入/root/rpmbuild/SPECS/，编辑打包脚本test.spec
+```
 Name:           universalDataAccess  
 Version:        1.1.1  
 Release:        0  
@@ -43,3 +44,4 @@ rpm -e --nodeps xxx.rpm
 
 ####  检查rpm包安装情况
 rpm -qa|grep xxx
+```
