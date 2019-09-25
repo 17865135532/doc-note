@@ -1,33 +1,3 @@
-####  ssh登录 
-ssh root@192.168.1.1  
-其中root表示的是登录用户名，192.168.1.1为主机的IP地址，当然也可以使用主机名、域名来指代IP地址。  
-ssh 192.168.1.1  
-则会以当前客户端的用户名进行登录。  
-####  配置主机之间的免密ssh登陆
-假如 A  要登陆  B  
-在A上操作：  
-%%首先生成密钥对  
-ssh-keygen   (提示时，直接回车即可)  
-%%再将A自己的公钥拷贝并追加到B的授权列表文件authorized_keys中  
-ssh-copy-id   B  
-
-####  修改centos6.x的IP地址
-1.`vim /etc/sysconfig/network-scripts/ifcfg-eth0`
-```
-DEVICE=eth0
-HWADDR=00:0C:29:84:A8:8E
-TYPE=Ethernet
-UUID=92f34042-51e3-40be-b0c6-561d58d4023d
-ONBOOT=yes
-NM_CONTROLLED=yes
-BOOTPROTO=static
-IPADDR=192.168.41.100
-NETMASK=255.255.255.0
-GATEWAY=192.168.41.2
-DNS1=8.8.8.8
-```
-2.`service network restart`
-
 ####  修改centos7.x的IP地址  
 1.`vim /etc/sysconfig/network-scripts/ifcfg-ens33`
 ```
@@ -53,15 +23,13 @@ GATEWAY=192.168.41.2
 DNS1=8.8.8.8
 ```
 2.`service network restart`  
+####  centos7关闭防火墙
+1.firewall-cmd --state  查看防火墙状态  
+2.systemctl stop firewalld.service  停止防火墙  
+3.systemctl disable firewalld.service 禁止防火墙开机启动  
 ####  修改主机名
 1.`vim /etc/hostname`  
 2.`reboot`
-####  修改centos开机默认root账户  
-使用root账户进入系统后，打开'/etc/gdm/custom.conf'文件，在[daemon]下添加两行
-```  
-AutomaticLoginEnable=True  
-AutomaticLogin=root  
-```
 ####  文件跟踪命令
 tail -f 文件名 根据文件唯一inode跟踪  
 tail -F 文件名 根据文件名跟踪,用于滚动的日志记录  
@@ -82,16 +50,6 @@ Default runlevel. The runlevels used are:
 5 - X11  
 6 - reboot (Do NOT set initdefault to this)  
 id:3:initdefault:  
-####  查看centos版本
-cat /etc/redhat-release  
-####  centos7关闭防火墙
-1.firewall-cmd --state  查看防火墙状态  
-2.systemctl stop firewalld.service  停止防火墙  
-3.systemctl disable firewalld.service 禁止防火墙开机启动  
-####  centos6关闭防火墙
-1.service iptables status  查看防火墙状态  
-2.service iptables stop  停止防火墙  
-3.chkconfig iptables off  禁止防火墙开机启动  
 ####  解压缩命令
 tar -zcvf my.tar aaa/  压缩  
 tar -zxvf my.tar.gz  解压  
