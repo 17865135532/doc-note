@@ -27,6 +27,11 @@ DNS1=8.8.8.8
 1.firewall-cmd --state  查看防火墙状态  
 2.systemctl stop firewalld.service  停止防火墙  
 3.systemctl disable firewalld.service 禁止防火墙开机启动  
+####  安装ifconfig
+1.yum search ifconfig  
+2.yum install net-tools.x86_64
+####  安装lrzsz
+1.yum install lrzsz
 ####  修改主机名
 1.`vim /etc/hostname`  
 2.`reboot`

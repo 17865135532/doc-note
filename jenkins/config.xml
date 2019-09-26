@@ -18,7 +18,7 @@
     <jdks>
         <jdk>
             <name>JDK</name>
-            <home>/usr/local/jdk1.8</home>
+            <home>/home/jdk1.8.0_202</home>
             <properties/>
         </jdk>
     </jdks>

@@ -1,12 +1,9 @@
-####  安装rpmbuild环境
+####  在线安装rpmbuild环境
     yum install rpm-build
     yum install rpm-devel
     yum install rpmdevtools
-
 ####  生成rpm运行环境：
     rpmdev-setuptree
-
-
 ####  进入/root/rpmbuild/SPECS/，编辑打包脚本test.spec
 ```
 Name:           universalDataAccess  
@@ -45,3 +42,7 @@ rpm -e --nodeps xxx.rpm
 ####  检查rpm包安装情况
 rpm -qa|grep xxx
 ```
+####  离线安装rpmbuild
+1.yum --downloadonly --downloaddir=/home/packages install rpm-build rpm-devel rpmdevtools  
+2.cd /home/packages  
+3.rpm -ivh --force --nodeps *.rpm  
